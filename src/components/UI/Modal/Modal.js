@@ -6,17 +6,26 @@ import Backdrop from '../Backdrop/Backdrop';
 
 class Modal extends Component {
 
+  // componentWillReceiveProps() {
+  //   console.log('[Modal...] WillReceiveProps');
+  // }
+
   shouldComponentUpdate(nextProps, nextState) {
     // console.log('nextProps: ', nextProps);
     // console.log('this.props: ', this.props);
     // console.log('nextState: ', nextState);
     // console.log('this.state: ', this.state);
-    return nextProps.show !== this.props.show;
+    return nextProps.show !== this.props.show || 
+    nextProps.children !== this.props.children;
   }
 
-  componentWillUpdate () {
-    console.log('Modal WillUpdate');
-  }
+  // componentWillUpdate () {
+  //   console.log('[Modal...] WillUpdate');
+  // }
+
+  // componentDidUpdate () {
+  //   console.log('[Modal...] DidUpdate');
+  // }
 
   render () {
     return (
